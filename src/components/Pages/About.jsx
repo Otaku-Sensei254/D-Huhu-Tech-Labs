@@ -227,15 +227,6 @@ const About = () => {
                 <p className="team-card-role">Head of WebWorks</p>
               </div>
             </div>
-
-            <div className="team-card-modern">
-              <img src={teamImage3} alt="Sarah Lee" />
-              <div className="team-card-overlay"></div>
-              <div className="team-card-info">
-                <h4 className="team-card-name">Sarah Lee</h4>
-                <p className="team-card-role">Lead Solutions Architect</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

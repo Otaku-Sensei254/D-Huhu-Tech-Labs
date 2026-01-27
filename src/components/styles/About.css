@@ -504,7 +504,7 @@
 .team-cards-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .team-card-modern {

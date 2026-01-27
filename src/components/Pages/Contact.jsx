@@ -230,10 +230,10 @@ const Contact = () => {
                     className="form-select"
                   >
                     <option value="not-sure">Not sure yet</option>
-                    <option value="1k-5k">$1,000 - $5,000</option>
-                    <option value="5k-20k">$5,000 - $20,000</option>
-                    <option value="20k-50k">$20,000 - $50,000</option>
-                    <option value="50k-plus">$50,000+</option>
+                    <option value="50k-200k">KES 50,000 - 200,000</option>
+                    <option value="200k-500k">KES 200,000 - 500,000</option>
+                    <option value="500k-1m">KES 500,000 - 1,000,000</option>
+                    <option value="1m-plus">KES 1,000,000+</option>
                   </select>
                 </div>
               </div>
@@ -298,9 +298,9 @@ const Contact = () => {
             <h3>Visit Our Socials</h3>
             <ul>
               <li>
-                <a href="https://www.instagram.com/dhuhuinc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/dhuhu_techlabs/" target="_blank" rel="noopener noreferrer">
                   <FaInstagram className="social-icon instagram" />
-                  <span>D-Huhu Inc</span>
+                  <span>D-Huhu Tech Labs</span>
                 </a>
               </li>
               <li>
