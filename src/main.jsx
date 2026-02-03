@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer.jsx'
 import Home from './components/Pages/Home.jsx'
 import About from './components/Pages/About.jsx'
 import Divisions from './components/Pages/Divisions.jsx'
+import WebWorksProjects from './components/Pages/WebWorksProjects.jsx'
 import Contact from './components/Pages/Contact'
 const Layout = () => {
   return (
@@ -34,7 +35,12 @@ const route = createBrowserRouter([
       {
         path: '/divisions',
         element: <Divisions/>
-      },{
+      },
+      {
+        path: '/webworks-projects',
+        element: <WebWorksProjects/>
+      },
+      {
         path:'/contact',
         element:<Contact/>
       }

@@ -15,6 +15,8 @@ import avatar3 from '../../assets/images/avator.jpg'
 import avatar4 from '../../assets/images/avator.jpg'
 import avatar5 from '../../assets/images/avator.jpg'
 import { Link } from 'react-router-dom'
+import jabaliImage from '../../assets/images/jabali.jpeg'
+import vibeflowImage from '../../assets/images/VF.png'
 
 const Divisions = () => {
   return (
@@ -109,6 +111,33 @@ const Divisions = () => {
                   Providing versatile web development and maintenance for businesses seeking 
                   growth and security.
                 </p>
+                <div className="webworks-projects-preview">
+                  <h4>Featured Projects:</h4>
+                  <div className="mini-projects">
+                    <div className="mini-project">
+                      <img src={jabaliImage} alt="Jabali Web App" />
+                      <div className="mini-project-info">
+                        <h5>Jabali Web App</h5>
+                        <p>Educational platform for autistic children</p>
+                        <a href="https://jabali-web-app.vercel.app/home" target="_blank" rel="noopener noreferrer">View →</a>
+                      </div>
+                    </div>
+                    <div className="mini-project">
+                      <img src={vibeflowImage} alt="VibeFlow" />
+                      <div className="mini-project-info">
+                        <h5>VibeFlow</h5>
+                        <p>Social media platform</p>
+                        <a href="https://vibeflow.gigalixirapp.com" target="_blank" rel="noopener noreferrer">View →</a>
+                      </div>
+                    </div>
+                  </div>
+                  <Link to="/webworks-projects" className="view-all-projects">
+                    View All Projects
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
 

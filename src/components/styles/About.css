@@ -193,6 +193,7 @@
 
 .rainbow-button:hover .button-text-wrapper {
   transform: translateY(-24px);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-text {
@@ -225,6 +226,8 @@
 .secondary-button:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .secondary-button svg {
@@ -247,6 +250,8 @@
 
 .outline-button:hover {
   background: #e5e7eb;
+  transform: translateY(-2px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero Buttons */

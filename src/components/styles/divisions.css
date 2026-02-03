@@ -110,6 +110,7 @@
     background: rgb(30, 41, 59);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .divisions-primary-btn svg {
@@ -136,6 +137,7 @@
     background: white;
     border-color: #cbd5e1;
     transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .divisions-secondary-btn svg {
@@ -247,6 +249,103 @@
     color: #64748b;
     margin: 0;
   }
+
+  /* WebWorks Projects Preview */
+  .webworks-projects-preview {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e2e8f0;
+  }
+
+  .webworks-projects-preview h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  .mini-projects {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .mini-project {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  .mini-project:hover {
+    background: #f1f5f9;
+    transform: translateX(4px);
+  }
+
+  .mini-project img {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .mini-project-info {
+    flex: 1;
+  }
+
+  .mini-project-info h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+  }
+
+  .mini-project-info p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+  }
+
+  .mini-project-info a {
+    font-size: 0.85rem;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  .mini-project-info a:hover {
+    color: #2563eb;
+  }
+
+  .view-all-projects {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+  }
+
+  .view-all-projects:hover {
+    gap: 0.75rem;
+    color: #2563eb;
+  }
+
+  .view-all-projects svg {
+    transition: transform 0.3s ease;
+  }
+
+  .view-all-projects:hover svg {
+    transform: translateX(2px);
+  }
   
   /* Rainbow Button for Solutions CTA */
   .solutions-cta {
@@ -274,6 +373,7 @@
     background: rgb(30, 41, 59);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(15, 23, 42, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   /* Add Rainbow Button styles */
@@ -332,6 +432,7 @@
   
   .rainbow-button:hover .button-text-wrapper {
     transform: translateY(-24px);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .button-text {
@@ -584,6 +685,8 @@
   
   .package-button:hover {
     background: #e2e8f0;
+    transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .package-button-primary {
@@ -593,6 +696,8 @@
   
   .package-button-primary:hover {
     background: rgb(30, 41, 59);
+    transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
   
   .package-features {
