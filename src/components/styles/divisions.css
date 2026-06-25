@@ -148,7 +148,6 @@
   /* Solutions Section */
   .divisions-solutions {
     padding: 5rem 2rem;
-    background: white;
   }
   
   .solutions-container {
@@ -450,7 +449,6 @@
   /* Blockchain Section */
   .blockchain-section {
     padding: 5rem 2rem;
-    background: #fafbfc;
   }
   
   .blockchain-container {
@@ -535,19 +533,18 @@
   /* Packages Section */
   .packages-section {
     padding: 5rem 2rem;
-    background: white;
   }
-  
+
   .packages-container {
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+
   .packages-header {
     text-align: center;
     margin-bottom: 4rem;
   }
-  
+
   .packages-badge {
     display: inline-flex;
     align-items: center;
@@ -558,21 +555,25 @@
     border: 1px solid rgba(0, 0, 0, 0.08);
     margin-bottom: 1.5rem;
   }
-  
+  .tier-tag {
+    color:#0f172a;
+    font-weight: 600;
+  }
+
   .packages-title {
     font-size: 2.5rem;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 0.5rem;
   }
-  
+
   .packages-subtitle {
     font-size: 1.5rem;
     font-weight: 300;
     color: #94a3b8;
     margin-bottom: 1.5rem;
   }
-  
+
   .packages-description {
     font-size: 1rem;
     line-height: 1.7;
@@ -580,14 +581,14 @@
     max-width: 700px;
     margin: 0 auto;
   }
-  
+
   /* Packages Grid */
   .packages-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  
+
   .package-card {
     background: white;
     border: 2px solid #e2e8f0;
@@ -595,20 +596,21 @@
     padding: 2rem;
     transition: all 0.3s ease;
     position: relative;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .package-card:hover {
     border-color: #cbd5e1;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     transform: translateY(-5px);
   }
-  
+
   .package-card-featured {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(147, 197, 253, 0.05) 100%);
     border: 3px solid rgb(59, 130, 246);
-    transform: scale(1.02);
   }
-  
+
   .package-popular-badge {
     position: absolute;
     top: -1px;
@@ -617,125 +619,309 @@
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0 20px 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.25rem;
-  }
-  
-  .package-popular-badge span:first-child {
     font-size: 0.875rem;
     font-weight: 600;
   }
-  
-  .most-popular {
-    font-size: 0.75rem;
-    opacity: 0.9;
-  }
-  
+
   .package-header {
-    margin-bottom: 1.5rem;
-  }
-  
-  .package-name {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #64748b;
     margin-bottom: 1rem;
   }
-  
+
+  .package-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
   .package-price {
     display: flex;
     align-items: baseline;
-    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0.25rem;
+  }
+
+  .price-amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #0f172a;
+  }
+
+  .package-maintenance {
+    font-size: 1rem;
+    color: #64748b;
     margin-bottom: 1rem;
   }
-  
-  .price-amount {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #0f172a;
-  }
-  
-  .price-period {
-    font-size: 1rem;
-    color: #64748b;
-  }
-  
-  .package-tagline {
-    font-size: 0.95rem;
-    color: #64748b;
-    line-height: 1.5;
-    margin: 0;
-  }
-  
-  .package-button {
-    width: 100%;
-    background: #f1f5f9;
-    color: #0f172a;
-    border: none;
-    padding: 1rem;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-bottom: 2rem;
-  }
-  
-  .package-button:hover {
-    background: #e2e8f0;
-    transform: translateY(-2px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
-  .package-button-primary {
-    background: rgb(15, 23, 42);
-    color: white;
-  }
-  
-  .package-button-primary:hover {
-    background: rgb(30, 41, 59);
-    transform: translateY(-2px);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  
+
   .package-features {
     border-top: 1px solid #e2e8f0;
-    padding-top: 1.5rem;
+    padding-top: 1.25rem;
+    margin-bottom: 1.25rem;
   }
-  
+
   .features-title {
-    font-size: 0.875rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: #0f172a;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
   }
-  
-  .features-subtitle {
-    font-size: 0.875rem;
-    color: #64748b;
-    margin-bottom: 1rem;
-  }
-  
+
   .features-list {
     list-style: none;
     padding: 0;
     margin: 0;
   }
-  
+
   .features-list li {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #475569;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #f1f5f9;
+    padding: 0.4rem 0;
   }
-  
-  .features-list li:last-child {
+
+  .package-ideal {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ideal-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+  }
+
+  .ideal-text {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  .package-button {
+    width: 100%;
+    background: #f1f5f9;
+    color: #0f172a;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+  }
+
+  .package-button:hover {
+    background: #e2e8f0;
+    transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .package-button-primary {
+    background: rgb(15, 23, 42);
+    color: white;
+  }
+
+  .package-button-primary:hover {
+    background: rgb(30, 41, 59);
+    transform: translateY(-2px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Optional Add-ons */
+  .addons-section {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #f8fafc;
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+  }
+
+  .addons-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .addons-table {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .addon-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+
+  .addon-row:last-child {
     border-bottom: none;
   }
+
+  .addon-name {
+    font-size: 0.95rem;
+    color: #0f172a;
+    font-weight: 500;
+  }
+
+  .addon-price {
+    font-size: 0.95rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    white-space: nowrap;
+  }
   
+  .price-student {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #d97706;
+    margin-left: 0.5rem;
+  }
+
+  .price-original {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: line-through;
+  }
+
+  /* Student Discount Section */
+  .student-discount-section {
+    margin-top: 4rem;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+    border: 2px solid #fbbf24;
+    border-radius: 24px;
+    text-align: center;
+  }
+
+  .student-discount-badge {
+    display: inline-block;
+    background: #d97706;
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 62px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .student-discount-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  .student-discount-description {
+    font-size: 1rem;
+    color: #64748b;
+    max-width: 650px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  .student-requirements {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    max-width: 550px;
+    margin: 0 auto 2rem;
+  }
+
+  .student-req-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.25rem;
+  }
+
+  .student-req-subtitle {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+  }
+
+  .student-req-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .student-req-list li {
+    font-size: 0.95rem;
+    color: #0f172a;
+    font-weight: 500;
+  }
+
+  .student-pricing {
+    max-width: 550px;
+    margin: 0 auto 1.5rem;
+  }
+
+  .student-pricing-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  .student-pricing-table {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .student-pricing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+    gap: 1rem;
+  }
+
+  .student-pricing-row:last-child {
+    border-bottom: none;
+  }
+
+  .student-pkg-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0f172a;
+    text-align: left;
+  }
+
+  .student-pkg-price {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .student-price-highlight {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #d97706;
+  }
+
+  .student-discount-note {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin: 0;
+  }
+
   /* Tablet Layout */
   @media (min-width: 768px) {
     .divisions-hero-title {
@@ -767,12 +953,15 @@
     }
   
     .packages-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   
   /* Desktop Layout */
   @media (min-width: 1024px) {
+    .packages-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .divisions-hero {
       padding: 10rem 2rem 8rem;
     }
@@ -825,6 +1014,6 @@
     }
   
     .price-amount {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }

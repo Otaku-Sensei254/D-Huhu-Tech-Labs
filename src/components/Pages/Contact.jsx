@@ -12,7 +12,7 @@ import {
   FaLayerGroup, 
   FaGlobe,
   FaProjectDiagram,
-  FaDollarSign
+  FaTag
 } from 'react-icons/fa';
 import { BsFacebook } from 'react-icons/bs';
 import { FaInstagram } from 'react-icons/fa';
@@ -222,7 +222,7 @@ const Contact = () => {
               <div className="form-group">
                 <label htmlFor="budget">Estimated Budget</label>
                 <div className="input-icon">
-                  <FaDollarSign className="input-icon__icon" />
+                  <FaTag className="input-icon__icon" />
                   <select 
                     name="budget" 
                     value={formData.budget}
@@ -230,10 +230,10 @@ const Contact = () => {
                     className="form-select"
                   >
                     <option value="not-sure">Not sure yet</option>
-                    <option value="50k-200k">KES 50,000 - 200,000</option>
-                    <option value="200k-500k">KES 200,000 - 500,000</option>
-                    <option value="500k-1m">KES 500,000 - 1,000,000</option>
-                    <option value="1m-plus">KES 1,000,000+</option>
+                    <option value="10k-50k">KES 10,000 - 50,000</option>
+                    <option value="50k-150k">KES 50,000 - 150,000</option>
+                    <option value="150k-500k">KES 150,000 - 500,000</option>
+                    <option value="500k-plus">KES 500,000+</option>
                   </select>
                 </div>
               </div>

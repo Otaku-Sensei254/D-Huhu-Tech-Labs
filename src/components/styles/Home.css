@@ -1,4 +1,4 @@
-/* Home.css */
+/* Home.css - Light Theme */
 .Home-container {
   display: flex;
   flex-direction: column;
@@ -6,6 +6,7 @@
   min-height: 100vh;
   padding: 2rem 1rem;
   margin-top: 100px;
+  position: relative;
 }
 
 .Home-top {
@@ -17,20 +18,21 @@
 }
 
 .Home-top h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgb(25, 25, 63);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
   text-align: center;
   margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .Home-top p {
-  color: #666;
+  color: var(--text-secondary);
   width: 100%;
   max-width: 800px;
   text-align: center;
   font-size: 1.2rem;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 3rem;
 }
 
@@ -58,17 +60,36 @@
 
 .bento-item {
   position: relative;
-  border-radius: 16px;
+  border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   aspect-ratio: 16/9;
   cursor: pointer;
 }
 
+.bento-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.08), transparent);
+  transition: left 0.6s ease;
+  z-index: 1;
+}
+
+.bento-item:hover::before {
+  left: 100%;
+}
+
 .bento-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 20px 50px rgba(59, 130, 246, 0.12);
 }
 
 .bento-item img {
@@ -94,16 +115,15 @@
 
 .bento-info h3 {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.5rem;
-  color: #ffcc00; 
+  color: #ffffff;
 }
 
 .bento-info p {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.4;
-  opacity: 0.9;
   margin: 0;
 }
 
@@ -112,8 +132,23 @@
   width: 100%;
   margin: 2rem 0;
   padding: 3rem 2rem;
-  background: linear-gradient(135deg, #e8eef7 0%, #d4dff0 100%);
-  border-radius: 20px;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+  overflow: hidden;
+}
+
+.core-divisions::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary-blue), var(--primary-purple), transparent);
+  opacity: 0.3;
 }
 
 .divisions-content-wrapper {
@@ -134,14 +169,17 @@
 
 .divisions-header h2 {
   font-size: 2.5rem;
-  font-weight: 700;
-  color: rgb(25, 25, 63);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 1rem;
 }
 
 .divisions-header p {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.6;
 }
@@ -154,47 +192,73 @@
 }
 
 .division-card {
-  border: 1px solid white;
-  background: transparent;
-  padding: 14px;
+  border: 1px solid var(--card-border);
+  background: #f8fafc;
+  padding: 1.5rem;
   text-align: left;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   position: relative;
+  border-radius: 16px;
 }
 
-.division-card:hover .division-icon {
-  transform: scale(1.1);
-  background: white;
+.division-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--primary-purple));
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  border-radius: 16px 16px 0 0;
+}
+
+.division-card:hover::after {
+  transform: scaleX(1);
+}
+
+.division-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.08);
+  transform: translateY(-4px);
 }
 
 .division-icon {
   width: 70px;
   height: 70px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+  border: 2px solid var(--card-border);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   z-index: 2;
 }
 
+.division-card:hover .division-icon {
+  transform: scale(1.1) rotate(5deg);
+  border-color: var(--primary-blue);
+  box-shadow: 0 8px 30px rgba(59, 130, 246, 0.2);
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+}
+
 .division-card h3 {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: rgb(25, 25, 63);
+  font-weight: 700;
+  color: var(--text-primary);
   margin-bottom: 0.8rem;
 }
-.di
+
 .division-card p {
-  color: #555;
+  color: var(--text-secondary);
   line-height: 1.7;
   font-size: 1rem;
   max-width: 500px;
@@ -211,7 +275,7 @@
   width: 100%;
   height: auto;
   border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   object-fit: cover;
 }
 
@@ -252,7 +316,6 @@
     min-height: 500px;
   }
 
-  /* Add connecting lines between cards on larger screens */
   .divisions-list::before {
     content: '';
     position: absolute;
@@ -262,8 +325,8 @@
     width: 2px;
     background: repeating-linear-gradient(
       to bottom,
-      #ccc 0px,
-      #ccc 8px,
+      var(--primary-blue) 0px,
+      var(--primary-blue) 8px,
       transparent 8px,
       transparent 16px
     );

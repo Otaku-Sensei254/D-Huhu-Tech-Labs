@@ -10,6 +10,7 @@ import About from './components/Pages/About.jsx'
 import Divisions from './components/Pages/Divisions.jsx'
 import WebWorksProjects from './components/Pages/WebWorksProjects.jsx'
 import SecureFixProjects from './components/Pages/SecureFixProjects.jsx'
+import ChainForgeProjects from './components/Pages/ChainForgeProjects.jsx'
 import Contact from './components/Pages/Contact'
 const Layout = () => {
   return (
@@ -44,6 +45,10 @@ const route = createBrowserRouter([
       {
         path: '/securefix-projects',
         element: <SecureFixProjects/>
+      },
+      {
+        path: '/chainforge-projects',
+        element: <ChainForgeProjects/>
       },
       {
         path:'/contact',
